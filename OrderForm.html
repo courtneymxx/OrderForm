@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pour Decisions Candle Order Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      padding: 10px;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      color: #e6007e; /* Classy pink font color */
+      font-family: 'Georgia', serif;
+    }
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    label {
+      font-size: 1.1em;
+      margin-top: 10px;
+      color: #333;
+    }
+    input[type="text"], input[type="email"], input[type="number"], select {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    .button {
+      background-color: #e6007e; /* Classy pink */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.1em;
+      display: block;
+      margin: 0 auto;
+    }
+    .button:hover {
+      background-color: #d1006b;
+    }
+    .note {
+      font-style: italic;
+      color: #666;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <form action="mailto:princesspourdecisions@gmail.com?subject=Order%20from%20{Name}" method="post" enctype="text/plain">
+    <h2>Pour Decisions Candle Order Form</h2>
+    
+    <!-- Customer Information -->
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required>
+
+    <!-- Candle Order Selections -->
+    <label for="pucker_up">Pucker Up - $20 (Qty):</label>
+    <input type="number" id="pucker_up" name="pucker_up" min="0" value="0">
+
+    <label for="baked_ambition">Baked Ambition - $20 (Qty):</label>
+    <input type="number" id="baked_ambition" name="baked_ambition" min="0" value="0">
+
+    <label for="apple_a_day">Apple A Day - $20 (Qty):</label>
+    <input type="number" id="apple_a_day" name="apple_a_day" min="0" value="0">
+
+    <label for="winter_woods">Winter Woods - $20 (Qty):</label>
+    <input type="number" id="winter_woods" name="winter_woods" min="0" value="0">
+
+    <label for="spiced_evergreen">Spiced Evergreen - $20 (Qty):</label>
+    <input type="number" id="spiced_evergreen" name="spiced_evergreen" min="0" value="0">
+
+    <label for="whiskey_warmth">Whiskey Warmth - $20 (Qty):</label>
+    <input type="number" id="whiskey_warmth" name="whiskey_warmth" min="0" value="0">
+
+    <label for="fresh_fierce">Fresh & Fierce - $20 (Qty):</label>
+    <input type="number" id="fresh_fierce" name="fresh_fierce" min="0" value="0">
+
+    <!-- Pickup or Delivery -->
+    <label for="pickup_or_delivery">Pickup or Delivery (Sunday Only):</label>
+    <select id="pickup_or_delivery" name="pickup_or_delivery" required>
+      <option value="delivery">Delivery (Sunday 1-4 PM)</option>
+      <option value="pickup">Pickup (Tuesday-Thursday evenings by appointment only)</option>
+    </select>
+
+    <label for="address">Delivery Address (if applicable):</label>
+    <input type="text" id="address" name="address" placeholder="Full address (for delivery)">
+
+    <!-- Payment Method -->
+    <label for="payment">Payment Method:</label>
+    <input type="text" id="payment" name="payment" placeholder="Cash or E-transfer only" required>
+
+    <!-- Note about Processing Time -->
+    <p class="note">Please allow 5-7 business days for order fulfillment upon ordering.</p>
+
+    <p class="note">Note: Pickup and delivery will be confirmed via email once your order is fulfilled.</p>
+
+    <p class="note">Please include your full name in the subject line before submitting the order.</p>
+
+    <!-- Submit Button -->
+    <button type="submit" class="button">Submit Order</button>
+  </form>
+</body>
+</html>
